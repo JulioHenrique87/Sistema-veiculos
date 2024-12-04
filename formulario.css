@@ -1,0 +1,136 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; /* Cinza escuro */
+    color: #dff600; /* Verde limão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #dff600; /* Verde limão */
+}
+
+p#subtitulo {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #b6d700; /* Tom mais suave de verde limão */
+}
+
+/* Estilo do formulário */
+form {
+    height: 75%;
+    width: 80%;
+    max-width: 500px;
+    background: #3a3a3a; /* Cinza médio */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Campos do formulário */
+.campo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #4c4c4c; /* Cinza escuro */
+    color: #dff600; /* Verde limão */
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    box-shadow: 0 0 5px #dff600;
+}
+
+/* Botões */
+button.botao {
+    width: 100%;
+    background-color: #dff600; /* Verde limão */
+    color: #2c2c2c; /* Cinza escuro */
+    border: none;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button.botao:hover {
+    background-color: #c0e500; /* Verde limão escuro */
+    box-shadow: 0 0 10px #dff600;
+    transform: scale(1.05);
+}
+
+button.botao:active {
+    transform: scale(0.95);
+    background-color: #a8d200; /* Verde ainda mais escuro */
+}
+
+/* Checkboxes e Radio Buttons */
+#check label,
+.campo label {
+    margin-right: 1rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+/* Fieldsets */
+fieldset.grupo {
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    form {
+        padding: 1.5rem;
+    }
+
+    button.botao {
+        font-size: 1rem;
+    }
+
+    input[type="text"],
+    textarea,
+    select {
+        font-size: 0.9rem;
+    }
+}

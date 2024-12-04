@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="atualizar.css">
+    <title>Atualizar Carro</title>
+</head>
+
+<body>
+    <h1>Atualizar Carro</h1>
+
+    <!-- Formulário para atualizar o veículo -->
+    <form method="POST" action="atualiza_carro.php">
+        <label for="id_carros"><strong>ID do Carro</strong></label>
+        <input type="text" id="id_carros" name="id_carros" required><br><br>
+
+        <label for="modelo"><strong>Modelo</strong></label>
+        <input type="text" id="modelo" name="modelo"><br><br>
+
+        <label for="marca"><strong>Marca</strong></label>
+        <input type="text" id="marca" name="marca"><br><br>
+
+        <label for="ano"><strong>Ano</strong></label>
+        <input type="text" id="ano" name="ano"><br><br>
+
+        <label><strong>Estado</strong></label><br>
+        <label><input type="radio" name="estado" value="zero"> Zero</label>
+        <label><input type="radio" name="estado" value="seminovo"> Semi-novo</label>
+        <label><input type="radio" name="estado" value="usado"> Usado (5 anos +)</label><br><br>
+
+        <label for="cambio"><strong>Câmbio</strong></label>
+        <select id="cambio" name="cambio">
+            <option value="automatico">Automático</option>
+            <option value="manual">Manual</option>
+        </select><br><br>
+
+        <label for="observacoes"><strong>Observações</strong></label><br>
+        <textarea id="observacoes" name="observacoes" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">Atualizar Carro</button>
+    </form>
+</body>
+
+</html>

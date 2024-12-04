@@ -1,0 +1,99 @@
+/* Estilo geral */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c2c2c; /* Cinza escuro */
+    color: #dff600; /* Verde limão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #dff600;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: #3a3a3a; /* Cinza médio */
+    color: #dff600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 1rem;
+    text-align: center;
+    border: none;
+}
+
+table th {
+    background-color: #4c4c4c; /* Cinza mais escuro */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(odd) {
+    background-color: #353535; /* Cinza escuro */
+}
+
+table tr:nth-child(even) {
+    background-color: #3a3a3a; /* Cinza médio */
+}
+
+table tr:hover {
+    background-color: #4c4c4c; /* Destaque ao passar o mouse */
+    cursor: pointer;
+}
+
+/* Botão voltar */
+a input[type="button"] {
+    background-color: #dff600; /* Verde limão */
+    color: #2c2c2c; /* Cinza escuro */
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+a input[type="button"]:hover {
+    background-color: #c0e500; /* Verde limão escuro */
+    box-shadow: 0 0 10px #dff600;
+    transform: scale(1.05);
+}
+
+a input[type="button"]:active {
+    transform: scale(0.95);
+    background-color: #a8d200; /* Verde ainda mais escuro */
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    table {
+        font-size: 0.9rem;
+    }
+
+    a input[type="button"] {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}

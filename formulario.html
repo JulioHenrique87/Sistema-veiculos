@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+    <head>
+        <!-- Metadados -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css" href="formulario.css" media="screen">
+
+        <!-- Título da página (aparece na aba) -->
+        <title>Cadastro</title>
+    </head>
+
+    <body>  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Cadastro de Carros</h1>
+            <p id="subtitulo">Complete os campos com as informações</p>
+            <br>
+        </div>
+
+        <!-- Início do formulário -->
+        <form method="POST" action="cadastra_carro.php">
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="modelo"><strong>Modelo</strong></label>
+                    <input type="text" name="modelo" id="modelo" required>
+                </div>
+
+                <!-- Campo do sobrenome com legenda "sobrenome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="marca"><strong>Marca</strong></label>
+                    <input type="text" name="marca" id="marca" required>
+                </div>
+            </fieldset> 
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="ano"><strong>Ano</strong></label>
+                <input type="text" name="ano" id="ano" required>
+            </div>
+
+            <!-- Campo de desenvolvimento web com 3 opções de botões selecionáveis (radio button) e css de classe "campo" -->
+            <div class="campo">
+                <label><strong>Qual o estado do veículo?</strong></label>
+                <label>
+                    <input type="radio" name="estado" value="zero" checked>Zero
+                </label>
+                <label>
+                    <input type="radio" name="estado" value="seminovo">Semi-novo
+                </label>
+                <label>
+                    <input type="radio" name="estado" value="usado">Usado (5 anos +)
+                </label>
+            </div>
+
+            <!-- Campo de senioridade com 3 opções para escolha (select option) e css de classe "campo" -->
+            <div class="campo">
+                <label for="cambio"><strong>Câmbio</strong></label>
+                <select id="cambio" name="cambio" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option value="automatico">Automático</option>
+                  <option value="manual">Manual</option>
+                </select>
+            </div>
+
+            <fieldset class="grupo">
+                <!-- Campo de opcional para escolha de 1 ou mais opções para marcar (checkbox) e css de classe "campo" -->
+                <div id="check">
+                    <label><strong>Selecione os opcionais existentes no veículo.</strong></label><br><br>
+                    <input type="checkbox" id="opcional1" name="opcional[]" value="Ar-condicionado">
+                    <label for="opcional1"> Ar-condicionado</label>
+                    <input type="checkbox" id="opcional2" name="opcional[]" value="4 portas">
+                    <label for="opcional2"> 4 portas</label>
+                    <input type="checkbox" id="opcional3" name="opcional[]" value="Vidro elétrico">
+                    <label for="opcional3"> Vidro elétrico</label>
+                    <input type="checkbox" id="opcional4" name="opcional[]" value="Trava elétrica">
+                    <label for="opcional4"> Trava elétrica</label>
+                    <input type="checkbox" id="opcional5" name="opcional[]" value="Alarme">
+                    <label for="opcional5"> Alarme</label>
+                    <input type="checkbox" id="opcional6" name="opcional[]" value="Roda de liga leve">
+                    <label for="opcional6"> Roda de liga leve</label>
+                    <input type="checkbox" id="opcional7" name="opcional[]" value="Central multimídia">
+                    <label for="opcional7"> Central multimídia</label>
+                    <input type="checkbox" id="opcional8" name="opcional[]" value="Computador de bordo">
+                    <label for="opcional8"> Computador de bordo</label>
+                </div>
+            </fieldset>
+
+            <!-- Caixa de texto -->
+            <div class="campo">
+                <br>
+                <label for="observacoes"><strong>Cite algumas observasões sobre o veículo. 
+                    EX: Se ja se envolveu em sinistro, ou manutenções mecânicas que foram feitas recentemente. </strong></label>
+                <textarea rows="6" style="width: 26em" id="observacoes" name="observacoes"></textarea>
+            </div>
+
+            <!-- Botão para enviar o formulário -->
+            <button class="botao" type="submit" onsubmit="">Concluído</button>            
+
+        </form>
+
+    </body>
+
+</html>
+
+
+
+
